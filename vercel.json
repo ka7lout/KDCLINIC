@@ -14,7 +14,16 @@
       ]
     },
     {
-      "source": "/(og-image.jpg|apple-touch-icon(.*)\\.png|android-chrome-(.*)\\.png|favicon(.*)\\.(ico|png|svg)|mstile-(.*)\\.png|safari-pinned-tab\\.svg)",
+      "source": "/(og-image\\.jpg|safari-pinned-tab\\.svg|favicon\\.ico|favicon\\.svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/([^/]+\\.png)",
       "headers": [
         {
           "key": "Cache-Control",
