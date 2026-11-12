@@ -8,6 +8,7 @@ import {
   ArrowUpLeft,
   Sparkles,
   Images,
+  CalendarCheck,
 } from 'lucide-react';
 import { CLINIC_INFO, CLINIC_ROOMS, downloadClinicVCard } from '../data/clinicData';
 import { KdcLogo } from './KdcLogo';
@@ -80,10 +81,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Primary Contact & Social Actions Hub (All 5 Official Links) */}
+          {/* Primary Contact & Social Actions Hub (All 6 Official Links) */}
           <nav aria-label="طرق التواصل والحجز المباشر" className="space-y-3">
-            {/* 1. Primary WhatsApp CTA + 2. Direct Phone Call */}
-            <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+            {/* 1. Primary WhatsApp CTA + 2. Direct Phone Call + 3. Vezeeta Online Booking */}
+            <div className="grid grid-cols-2 max-[340px]:grid-cols-1 gap-2.5 sm:gap-3">
               {/* WhatsApp */}
               <a
                 href={CLINIC_INFO.whatsappDefaultUrl}
@@ -129,6 +130,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
                 <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-black/15 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
                   <Phone className="w-4 h-4 sm:w-6 sm:h-6" />
+                </div>
+              </a>
+
+              {/* Vezeeta Online Booking */}
+              <a
+                href={CLINIC_INFO.vezeetaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 max-[340px]:col-span-1 group flex items-center justify-between gap-2.5 sm:gap-4 px-3.5 py-3 sm:px-5 sm:py-4 rounded-2xl bg-[#0066BE] hover:bg-[#00529B] text-white shadow-lg shadow-[#0066BE]/20 transition-all duration-200 hover:-translate-y-0.5 min-h-[64px] sm:min-h-[74px] focus:outline-none focus:ring-3 focus:ring-[#0066BE]/50"
+              >
+                <div className="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
+                  <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/15 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <CalendarCheck className="w-4 h-4 sm:w-6 sm:h-6" />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-sm sm:text-xl font-black block leading-tight">
+                      احجز على فيزيتا
+                    </span>
+                    <span className="text-[11px] sm:text-sm font-semibold text-blue-50 mt-0.5 block leading-snug">
+                      تأكيد فوري وتقييمات المرضى
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-white text-[#0066BE] text-[10px] sm:text-xs font-num font-extrabold shadow-sm">
+                    <span
+                      className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#EF0F0F]"
+                      aria-hidden="true"
+                    />
+                    <span>Vezeeta</span>
+                  </span>
+                  <ArrowUpLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white/90 group-hover:text-white shrink-0 transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </a>
             </div>

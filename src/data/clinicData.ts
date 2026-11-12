@@ -60,6 +60,8 @@ export const CLINIC_INFO = {
   instagramUrl: 'https://www.instagram.com/elkahlot_dental_clinic?srtk=a2I4bmN1bGo1bWU4',
   instagramHandle: '@elkahlot_dental_clinic',
   facebookUrl: 'https://www.facebook.com/share/1DzCcQCesE/',
+  vezeetaUrl:
+    'https://www.vezeeta.com/ar/dr/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-%D8%A7%D9%84%D9%83%D8%AD%D9%84%D9%88%D8%AA-%D8%A7%D8%B3%D9%86%D8%A7%D9%86',
 } as const;
 
 export function buildWhatsAppUrl(customMessage: string): string {

@@ -122,12 +122,6 @@ export function App() {
             className="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-extrabold text-[var(--muted)]"
           >
             <a
-              href="#services"
-              className="px-3.5 py-2 rounded-xl hover:bg-[var(--bg)] hover:text-[var(--brand)] transition"
-            >
-              الخدمات العلاجية
-            </a>
-            <a
               href="#cases"
               className="px-3.5 py-2 rounded-xl hover:bg-[var(--bg)] hover:text-[var(--brand)] transition"
             >
@@ -138,6 +132,12 @@ export function App() {
               className="px-3.5 py-2 rounded-xl hover:bg-[var(--bg)] hover:text-[var(--brand)] transition"
             >
               العيادة من الداخل
+            </a>
+            <a
+              href="#services"
+              className="px-3.5 py-2 rounded-xl hover:bg-[var(--bg)] hover:text-[var(--brand)] transition"
+            >
+              الخدمات العلاجية
             </a>
             <a
               href="#about-location"
@@ -198,18 +198,18 @@ export function App() {
           onOpenClinicLightbox={(idx) => setLightboxState({ group: 'rooms', index: idx })}
         />
 
-        {/* 2. Dental Services Section (9 Services) */}
-        <ServicesSection />
-
-        {/* 3. Real Clinical Results (4 Before & After Cases) */}
+        {/* 2. Real Clinical Results (4 Before & After Cases) */}
         <ClinicalCasesSection
           onOpenLightbox={(idx) => setLightboxState({ group: 'cases', index: idx })}
         />
 
-        {/* 4. Clinic Interior Tour (6 Photos) */}
+        {/* 3. Clinic Interior Tour (6 Photos) */}
         <ClinicRoomsSection
           onOpenLightbox={(idx) => setLightboxState({ group: 'rooms', index: idx })}
         />
+
+        {/* 4. Dental Services Section (9 Services) */}
+        <ServicesSection />
 
         {/* 5. Doctor Credentials & Clinic Location */}
         <DoctorAndLocationSection />
