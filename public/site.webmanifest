@@ -1,0 +1,33 @@
+{
+  "name": "عيادة الكحلوت للأسنان | د. عبدالرحمن الكحلوت - KDCLINIC",
+  "short_name": "KDCLINIC",
+  "description": "عيادة الكحلوت للأسنان - د. عبدالرحمن الكحلوت أخصائي جراحة وزراعة وتجميل الأسنان وعضو الجمعية المصرية لزراعة الأسنان. متعاقدون مع جميع شركات التأمين الطبي والهيئات والنقابات الحكومية وقطاع البترول.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "theme_color": "#090B0E",
+  "background_color": "#090B0E",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+

@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f8f7;
+  --bg-elevated: #eaf2f0;
+  --surface: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.88);
+  --ink: #0b2f38;
+  --muted: #4f6f76;
+  --brand: #0f5c6e;
+  --brand-hover: #0b4654;
+  --brand-ink: #ffffff;
+  --wa: #1e9e55;
+  --wa-hover: #178044;
+  --line: #d3e3e1;
+  --gold: #c9a227;
+  --gold-light: #f3d87d;
+  --gold-border: rgba(212, 175, 55, 0.38);
+  --card-shadow: 0 12px 32px -8px rgba(11, 47, 56, 0.07), 0 4px 12px -2px rgba(11, 47, 56, 0.04);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #07161a;
+  --bg-elevated: #0c2228;
+  --surface: #102a30;
+  --surface-glass: rgba(16, 42, 48, 0.88);
+  --ink: #e8f3f2;
+  --muted: #9dbbc0;
+  --brand: #2aa6be;
+  --brand-hover: #38b8d1;
+  --brand-ink: #04161a;
+  --wa: #29b366;
+  --wa-hover: #34c173;
+  --line: #1d3f47;
+  --gold: #d4af37;
+  --gold-light: #f7e29c;
+  --gold-border: rgba(212, 175, 55, 0.45);
+  --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #07161a;
+    --bg-elevated: #0c2228;
+    --surface: #102a30;
+    --surface-glass: rgba(16, 42, 48, 0.88);
+    --ink: #e8f3f2;
+    --muted: #9dbbc0;
+    --brand: #2aa6be;
+    --brand-hover: #38b8d1;
+    --brand-ink: #04161a;
+    --wa: #29b366;
+    --wa-hover: #34c173;
+    --line: #1d3f47;
+    --gold: #d4af37;
+    --gold-light: #f7e29c;
+    --gold-border: rgba(212, 175, 55, 0.45);
+    --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(80px + env(safe-area-inset-top, 0px));
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-num {
+  font-family: "Plus Jakarta Sans", "Cairo", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Luxury KDC Obsidian & Gold Frame for Clinical Cases */
+.kdc-case-frame {
+  background: radial-gradient(circle at 50% 0%, #1d1a12 0%, #090b0e 65%, #050608 100%);
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 232, 163, 0.22);
+}
+
+.kdc-gold-gradient-text {
+  background: linear-gradient(135deg, #fff1b8 0%, #d4af37 48%, #aa8010 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kdc-gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.85) 50%, transparent 100%);
+}
+
+.kdc-gold-pill {
+  background: linear-gradient(180deg, rgba(28, 24, 14, 0.95) 0%, rgba(10, 9, 6, 0.98) 100%);
+  border: 1.5px solid #d4af37;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.2);
+}
+
+/* Foldable & Surface Duo / Galaxy Z Fold Dual-Screen Optimizations */
+@media (horizontal-viewport-segments: 2) {
+  .duo-safe-grid {
+    display: grid;
+    grid-template-columns: env(viewport-segment-width 0 0, 1fr) env(viewport-segment-width 1 0, 1fr);
+    column-gap: calc(env(viewport-segment-left 1 0, 24px) - env(viewport-segment-right 0 0, 0px) + 24px);
+  }
+}
+
+/* Intermediate Foldable / Square Unfolded Screens (Surface Duo, Galaxy Fold 540px - 880px) */
+@media (min-width: 540px) and (max-width: 880px) {
+  .foldable-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Ultra-Wide 21:9 & 4K Screens */
+@media (min-width: 1920px) {
+  .ultrawide-container {
+    max-width: 1480px;
+  }
+}
+
+/* Very small / compact mobile screens (320px - 360px) */
+@media (max-width: 360px) {
+  .compact-text-scale {
+    font-size: 1.65rem !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

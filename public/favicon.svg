@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="18%" r="85%">
+      <stop offset="0%" stop-color="#231D11" />
+      <stop offset="60%" stop-color="#0B0D11" />
+      <stop offset="100%" stop-color="#050608" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF4BE" />
+      <stop offset="35%" stop-color="#E7C45A" />
+      <stop offset="72%" stop-color="#C9A227" />
+      <stop offset="100%" stop-color="#9A740C" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D87D" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#C9A227" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F3D87D" stop-opacity="0.65" />
+    </linearGradient>
+  </defs>
+
+  <!-- Obsidian Rounded Badge -->
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#bgGrad)" stroke="url(#ringGrad)" stroke-width="10" />
+
+  <!-- Centered KDC Gold Emblem (scaled from 240x88 viewBox) -->
+  <g transform="translate(24, 174) scale(1.93)">
+    <!-- Letter K -->
+    <path d="M20 14H33V43L59 14H75L46 46L77 78H60L33 49V78H20V14Z" fill="url(#goldGrad)" />
+    <!-- Outer D Frame -->
+    <path d="M84 14H114C135 14 149 27 149 46C149 65 135 78 114 78H84V14ZM97 25V67H113C127 67 136 58 136 46C136 34 127 25 113 25H97Z" fill="url(#goldGrad)" />
+    <!-- Stylized Tooth Silhouette inside D -->
+    <path d="M106 31C102 31 99 34.5 99 39.5C99 45.5 102 49.5 103.5 55.5C104.8 60.5 106 63 108 63C109.8 63 110.5 58 112.5 58C114.5 58 115.2 63 117 63C119 63 120.2 60.5 121.5 55.5C123 49.5 126 45.5 126 39.5C126 34.5 123 31 119 31C116 31 114.2 33 112.5 33C110.8 33 109 31 106 31Z" stroke="url(#goldGrad)" stroke-width="3.6" fill="none" />
+    <!-- Letter C -->
+    <path d="M192 26C178 26 169 34.5 169 46C169 57.5 178 66 192 66C199 66 205 63.5 210 59L218 68C211 75 202 78.5 191 78.5C170 78.5 155 65 155 46C155 27 170 13.5 191 13.5C202 13.5 211 17 218 24L210 33C205 28.5 199 26 192 26Z" fill="url(#goldGrad)" />
+    <!-- Signature Sparkle Stars -->
+    <path d="M225 6L227.2 14.8L236 17L227.2 19.2L225 28L222.8 19.2L214 17L222.8 14.8L225 6Z" fill="#FFF1B8" />
+    <path d="M212 20L213.1 24.4L217.5 25.5L213.1 26.6L212 31L210.9 26.6L206.5 25.5L210.9 24.4L212 20Z" fill="#E5C158" />
+  </g>
+</svg>
+
